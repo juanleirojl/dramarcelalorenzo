@@ -387,11 +387,17 @@ input, textarea, select {
 
 .hero__img {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   border-radius: var(--border-radius-lg);
-  box-shadow: var(--shadow-heavy);
   position: relative;
   z-index: 2;
+  transition: var(--transition-medium);
+}
+
+.hero__img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.08) contrast(1.1);
+  cursor: pointer;
 }
 
 .hero__decoration {
