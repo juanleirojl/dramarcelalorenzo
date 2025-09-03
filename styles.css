@@ -3267,3 +3267,181 @@ input, textarea, select {
         padding: 2rem;
     }
 }
+
+/* ========== MOBILE RESPONSIVENESS FIXES ========== */
+/* Correções específicas para evitar scroll horizontal em dispositivos móveis */
+
+/* Garante que nenhum elemento vaze da tela */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Container responsivo */
+.container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+/* Correções para texto e títulos longos */
+@media (max-width: 768px) {
+    /* Hero section ajustada */
+    .hero__title {
+        font-size: 2.2rem !important;
+        line-height: 1.2;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    .hero__description {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    
+    /* Navegação mobile melhorada */
+    .nav__actions {
+        gap: 0.5rem;
+    }
+    
+    .btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+    
+    /* Grids responsivos */
+    .services__grid,
+    .specialties__grid,
+    .courses__grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+    
+    /* Cards ajustados */
+    .service-card,
+    .specialty-card,
+    .course-card {
+        padding: 1.5rem;
+        margin: 0;
+    }
+    
+    /* Imagens responsivas */
+    .hero__image,
+    .about__image {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Stats ajustados */
+    .stats__grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1rem;
+    }
+    
+    /* Footer responsivo */
+    .footer__content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    /* Padding reduzido em seções */
+    .section {
+        padding: 3rem 0;
+    }
+    
+    /* Títulos de seção ajustados */
+    .section__title {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    
+    /* Botões full width em mobile */
+    .hero__actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+    
+    .hero__actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Ajustes para telas muito pequenas */
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .hero__title {
+        font-size: 1.8rem !important;
+    }
+    
+    .section__title {
+        font-size: 1.6rem;
+    }
+    
+    /* Stats em coluna única */
+    .stats__grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Cards com menos padding */
+    .service-card,
+    .specialty-card,
+    .course-card {
+        padding: 1rem;
+    }
+    
+    /* Menu mobile otimizado */
+    .nav__list {
+        gap: 2rem;
+    }
+    
+    .nav__link {
+        font-size: 1.1rem;
+    }
+}
+
+/* Correções específicas para elementos que podem causar overflow */
+.hero__badge,
+.section__badge {
+    max-width: fit-content;
+    margin: 0 auto 1rem auto;
+}
+
+/* Garante que tabelas sejam responsivas */
+table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+}
+
+/* Correção para vídeos e iframes */
+iframe,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Overflow protection */
+body {
+    overflow-x: hidden !important;
+}
+
+html {
+    overflow-x: hidden !important;
+}
+
+/* Previne quebra de layout por elementos absolutos */
+.hero::before,
+.hero::after,
+.section::before,
+.section::after {
+    max-width: 100vw;
+}
