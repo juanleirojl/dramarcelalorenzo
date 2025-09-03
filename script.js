@@ -91,8 +91,17 @@ class HeaderManager {
   setupSmoothScroll() {
     this.navLinks.forEach(link => {
       link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        
+        // Não interceptar links externos, com target="_blank" ou arquivos .html
+        if (href.startsWith('http') || 
+            link.getAttribute('target') === '_blank' || 
+            href.endsWith('.html')) {
+          return; // Deixa o comportamento padrão do navegador
+        }
+        
         e.preventDefault();
-        const targetId = link.getAttribute('href');
+        const targetId = href;
         const targetElement = $(targetId);
         
         if (targetElement) {
@@ -935,6 +944,181 @@ class DrMarcelaApp {
 
 // ========== INITIALIZE APPLICATION ==========
 new DrMarcelaApp();
+
+// ========== MENTORIA FUNCTIONALITY ==========
+class MentoriaManager {
+  constructor() {
+    this.init();
+  }
+
+  init() {
+    this.setupCounterAnimation();
+    this.setupPlanCards();
+    this.setupMentoriaScroll();
+    this.setupNotifications();
+  }
+
+  setupCounterAnimation() {
+    const counters = $$('.stat-card__number');
+    const observerOptions = {
+      threshold: 0.5,
+      rootMargin: '0px'
+    };
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    counters.forEach(counter => {
+      counterObserver.observe(counter);
+    });
+  }
+
+  animateCounter(counter) {
+    const target = +counter.textContent.replace(/\D/g, '');
+    const duration = 2000;
+    const increment = target / (duration / 16);
+    let current = 0;
+
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+
+      if (counter.textContent.includes('+')) {
+        counter.textContent = Math.floor(current) + '+';
+      } else if (counter.textContent.includes('%')) {
+        counter.textContent = Math.floor(current) + '%';
+      } else {
+        counter.textContent = Math.floor(current);
+      }
+    }, 16);
+  }
+
+  setupPlanCards() {
+    const planCards = $$('.plano-card');
+    
+    planCards.forEach(card => {
+      const button = card.querySelector('.btn');
+      if (button) {
+        button.addEventListener('click', (e) => {
+          const planTitle = card.querySelector('.plano-card__title').textContent;
+          
+          // Track plan selection
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'plan_selection', {
+              'plan_name': planTitle,
+              'event_category': 'mentoria',
+              'event_label': planTitle
+            });
+          }
+
+          // Add visual feedback
+          card.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            card.style.transform = '';
+          }, 150);
+        });
+      }
+    });
+  }
+
+  setupMentoriaScroll() {
+    // Removido: links de mentoria agora direcionam para mentoria.html
+    // Função desabilitada pois a seção de mentoria foi movida para página separada
+  }
+
+  setupNotifications() {
+    // WhatsApp link tracking for mentoria
+    const whatsappLinks = $$('a[href*="wa.me"]');
+    
+    whatsappLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        this.showNotification('Redirecionando para o WhatsApp...', 'info');
+        
+        // Track WhatsApp clicks
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'whatsapp_click', {
+            'event_category': 'contact',
+            'event_label': 'mentoria_whatsapp'
+          });
+        }
+      });
+    });
+  }
+
+  showNotification(message, type = 'info') {
+    const notification = document.createElement('div');
+    notification.className = `notification notification--${type}`;
+    notification.innerHTML = `
+      <div class="notification__content">
+        <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i>
+        <span>${message}</span>
+        <button class="notification__close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    `;
+    
+    // Add styles
+    Object.assign(notification.style, {
+      position: 'fixed',
+      top: '20px',
+      right: '20px',
+      background: type === 'success' ? '#A8E063' : type === 'error' ? '#e74c3c' : '#6EC1E4',
+      color: 'white',
+      padding: '1rem 1.5rem',
+      borderRadius: '12px',
+      boxShadow: '0 8px 30px rgba(0,0,0,0.12)',
+      zIndex: '10000',
+      transform: 'translateX(100%)',
+      transition: 'transform 0.3s ease',
+      maxWidth: '400px',
+      fontSize: '0.9rem'
+    });
+    
+    document.body.appendChild(notification);
+    
+    // Animate in
+    setTimeout(() => {
+      notification.style.transform = 'translateX(0)';
+    }, 100);
+    
+    // Close functionality
+    const closeBtn = notification.querySelector('.notification__close');
+    closeBtn.addEventListener('click', () => {
+      this.hideNotification(notification);
+    });
+    
+    // Auto close
+    setTimeout(() => {
+      if (document.body.contains(notification)) {
+        this.hideNotification(notification);
+      }
+    }, 5000);
+  }
+
+  hideNotification(notification) {
+    notification.style.transform = 'translateX(100%)';
+    setTimeout(() => {
+      if (document.body.contains(notification)) {
+        document.body.removeChild(notification);
+      }
+    }, 300);
+  }
+}
+
+// Initialize mentoria functionality
+document.addEventListener('DOMContentLoaded', () => {
+  new MentoriaManager();
+});
 
 // ========== EXPORT FOR TESTING ==========
 if (typeof module !== 'undefined' && module.exports) {
