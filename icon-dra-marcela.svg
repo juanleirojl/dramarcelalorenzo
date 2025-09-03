@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Gradiente radial -->
+    <radialGradient id="iconGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#A8E063;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6EC1E4;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Sombra para profundidade -->
+    <filter id="iconShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Fundo circular -->
+  <circle cx="32" cy="32" r="30" fill="url(#iconGrad)" filter="url(#iconShadow)"/>
+  
+  <!-- Símbolo principal -->
+  <g transform="translate(32, 32)">
+    <!-- Forma orgânica representando cuidado e crescimento -->
+    <path d="M-12,-16 Q0,-20 12,-16 Q18,-8 16,0 Q12,8 4,12 Q0,14 0,12 Q0,14 -4,12 Q-12,8 -16,0 Q-18,-8 -12,-16 Z" 
+          fill="#ffffff" opacity="0.95"/>
+    
+    <!-- Cruz médica central -->
+    <rect x="-1.5" y="-12" width="3" height="24" fill="url(#iconGrad)" rx="1.5"/>
+    <rect x="-10" y="-1.5" width="20" height="3" fill="url(#iconGrad)" rx="1.5"/>
+    
+    <!-- Círculo central para destaque -->
+    <circle cx="0" cy="0" r="3" fill="url(#iconGrad)" opacity="0.8"/>
+    <circle cx="0" cy="0" r="1.5" fill="#ffffff"/>
+    
+    <!-- Pequenos elementos decorativos -->
+    <circle cx="-8" cy="-8" r="1.5" fill="url(#iconGrad)" opacity="0.7"/>
+    <circle cx="8" cy="8" r="1.5" fill="url(#iconGrad)" opacity="0.7"/>
+    <circle cx="8" cy="-8" r="1" fill="#FFD700" opacity="0.8"/>
+    <circle cx="-8" cy="8" r="1" fill="#FFD700" opacity="0.8"/>
+  </g>
+  
+  <!-- Borda sutil -->
+  <circle cx="32" cy="32" r="30" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.3"/>
+</svg>

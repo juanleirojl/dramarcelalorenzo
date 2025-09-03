@@ -30,28 +30,32 @@
             </div>
             
             <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link">Início</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">Sobre</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#services" class="nav__link">Serviços</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#experience" class="nav__link">Experiência</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#courses" class="nav__link">Cursos</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">Contato</a>
-                    </li>
-                </ul>
-                
-                <div class="nav__close" id="nav-close">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#home" class="nav__link">Início</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#about" class="nav__link">Sobre</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#services" class="nav__link">Serviços</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#early-diagnosis" class="nav__link">Diagnóstico Precoce</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#children-care" class="nav__link">Atendimento Infantil</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#experience" class="nav__link">Experiência</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#courses" class="nav__link">Cursos</a>
+                            </li>
+                            <li class="nav__item">
+                                <a href="#contact" class="nav__link">Contato</a>
+                            </li>
+                        </ul>                <div class="nav__close" id="nav-close">
                     <i class="fas fa-times"></i>
                 </div>
             </div>
@@ -74,9 +78,27 @@
         <section class="hero" id="home">
             <div class="hero__container container">
                 <div class="hero__content" data-aos="fade-right" data-aos-duration="1000">
-                    <h1 class="hero__title">
-                        Dra. Marcela <span class="highlight">Lorenzo</span>
-                    </h1>
+                    <div class="hero__title-container">
+                        <div class="hero__icon">
+                            <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <linearGradient id="heroIconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#6EC1E4"/>
+                                        <stop offset="50%" style="stop-color:#A8E063"/>
+                                        <stop offset="100%" style="stop-color:#FFD700"/>
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="20" cy="20" r="18" fill="url(#heroIconGrad)" opacity="0.9"/>
+                                <path d="M12,14 C12,10 14,8 16,8 C18,8 18,10 18,12 C18,10 18,8 20,8 C22,8 24,10 24,14 C24,16 18,22 18,22 C18,22 12,16 12,14 Z" 
+                                      fill="#ffffff" opacity="0.9"/>
+                                <rect x="17.5" y="12" width="1" height="8" fill="url(#heroIconGrad)" rx="0.5"/>
+                                <rect x="14" y="17.5" width="8" height="1" fill="url(#heroIconGrad)" rx="0.5"/>
+                            </svg>
+                        </div>
+                        <h1 class="hero__title">
+                            Dra. Marcela <span class="highlight">Lorenzo</span>
+                        </h1>
+                    </div>
                     <h2 class="hero__subtitle">
                         Especialista em Motricidade Orofacial, <br>
                         Disfagia e Desenvolvimento Infantil
@@ -297,6 +319,295 @@
                             <li>Protocolos de atendimento</li>
                             <li>Supervisão clínica</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Early Diagnosis Section -->
+        <section class="early-diagnosis section" id="early-diagnosis">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <span class="section__subtitle">Diagnóstico Especializado</span>
+                    <h2 class="section__title">Diagnóstico Precoce</h2>
+                    <p class="section__description">
+                        A identificação precoce de dificuldades de comunicação é fundamental para 
+                        um desenvolvimento saudável. Realizamos avaliações completas e precisas.
+                    </p>
+                </div>
+                
+                <div class="diagnosis__content">
+                    <div class="diagnosis__info" data-aos="fade-right" data-aos-delay="200">
+                        <h3 class="diagnosis__title">Avaliação Completa e Detalhada</h3>
+                        <p class="diagnosis__description">
+                            Com instrumentos padronizados e experiência clínica, oferecemos diagnósticos 
+                            precisos que orientam o melhor plano de tratamento para cada paciente.
+                        </p>
+                        
+                        <div class="diagnosis__features">
+                            <div class="diagnosis__feature">
+                                <div class="feature__icon-diag">
+                                    <i class="fas fa-stethoscope"></i>
+                                </div>
+                                <div class="feature__content-diag">
+                                    <h4>Avaliação Fonoaudiológica</h4>
+                                    <p>Análise completa da comunicação oral e escrita</p>
+                                </div>
+                            </div>
+                            
+                            <div class="diagnosis__feature">
+                                <div class="feature__icon-diag">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <div class="feature__content-diag">
+                                    <h4>Avaliação Neurológica</h4>
+                                    <p>Investigação de aspectos neuromotores da fala</p>
+                                </div>
+                            </div>
+                            
+                            <div class="diagnosis__feature">
+                                <div class="feature__icon-diag">
+                                    <i class="fas fa-clipboard-list"></i>
+                                </div>
+                                <div class="feature__content-diag">
+                                    <h4>Relatório Detalhado</h4>
+                                    <p>Documento completo com diagnóstico e orientações</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="diagnosis__timeline">
+                            <h4>Processo de Avaliação</h4>
+                            <div class="timeline__steps">
+                                <div class="step">
+                                    <span class="step__number">1</span>
+                                    <span class="step__text">Anamnese e Histórico</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step__number">2</span>
+                                    <span class="step__text">Avaliação Clínica</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step__number">3</span>
+                                    <span class="step__text">Análise e Diagnóstico</span>
+                                </div>
+                                <div class="step">
+                                    <span class="step__number">4</span>
+                                    <span class="step__text">Plano de Tratamento</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="diagnosis__image" data-aos="fade-left" data-aos-delay="400">
+                        <div class="diagnosis__photo">
+                            <div class="photo-placeholder diagnosis-photo">
+                                <div class="photo-overlay">
+                                    <div class="photo-content">
+                                        <i class="fas fa-user-md photo-icon"></i>
+                                        <h4>Dra. Marcela Lorenzo</h4>
+                                        <p>Avaliação Fonoaudiológica Completa</p>
+                                        <div class="photo-tags">
+                                            <span class="tag">Diagnóstico Preciso</span>
+                                            <span class="tag">Ambiente Profissional</span>
+                                            <span class="tag">Atendimento Especializado</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="photo-bg">
+                                    <div class="consultation-scene">
+                                        <div class="doctor-figure"></div>
+                                        <div class="child-figure"></div>
+                                        <div class="desk"></div>
+                                        <div class="equipment"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="diagnosis__stats">
+                            <div class="stat__item">
+                                <span class="stat__icon"><i class="fas fa-user-check"></i></span>
+                                <div class="stat__info">
+                                    <span class="stat__number">1500+</span>
+                                    <span class="stat__label">Avaliações Realizadas</span>
+                                </div>
+                            </div>
+                            <div class="stat__item">
+                                <span class="stat__icon"><i class="fas fa-clock"></i></span>
+                                <div class="stat__info">
+                                    <span class="stat__number">48h</span>
+                                    <span class="stat__label">Entrega do Relatório</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Children Care Section -->
+        <section class="children-care section" id="children-care">
+            <div class="container">
+                <div class="section__header" data-aos="fade-up">
+                    <span class="section__subtitle">Cuidado Especializado</span>
+                    <h2 class="section__title">Atendimento Infantil</h2>
+                    <p class="section__description">
+                        Ambiente acolhedor e lúdico, onde cada criança se sente segura e confortável 
+                        durante o processo de desenvolvimento e reabilitação.
+                    </p>
+                </div>
+                
+                <div class="children-care__content">
+                    <div class="children-care__images" data-aos="fade-right" data-aos-delay="200">
+                        <!-- Imagem 1: Criança brincando durante terapia -->
+                        <div class="care-image care-image--1">
+                            <div class="care-image__placeholder">
+                                <div class="photo-placeholder therapy-photo">
+                                    <div class="photo-overlay">
+                                        <div class="photo-content">
+                                            <i class="fas fa-puzzle-piece photo-icon"></i>
+                                            <h4>Terapia Lúdica</h4>
+                                            <p>Brincadeiras direcionadas para desenvolvimento da comunicação</p>
+                                        </div>
+                                    </div>
+                                    <div class="photo-bg therapy-bg">
+                                        <div class="therapy-elements">
+                                            <div class="child-playing"></div>
+                                            <div class="therapist"></div>
+                                            <div class="toys"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="care-image__overlay">
+                                <h4>Terapia Lúdica</h4>
+                                <p>Brincadeiras direcionadas para desenvolvimento da comunicação</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Imagem 2: Avaliação com criança -->
+                        <div class="care-image care-image--2">
+                            <div class="care-image__placeholder">
+                                <div class="photo-placeholder evaluation-photo">
+                                    <div class="photo-overlay">
+                                        <div class="photo-content">
+                                            <i class="fas fa-stethoscope photo-icon"></i>
+                                            <h4>Avaliação Especializada</h4>
+                                            <p>Diagnóstico preciso com instrumentos padronizados</p>
+                                        </div>
+                                    </div>
+                                    <div class="photo-bg evaluation-bg">
+                                        <div class="evaluation-elements">
+                                            <div class="evaluation-desk"></div>
+                                            <div class="child-patient"></div>
+                                            <div class="professional"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="care-image__overlay">
+                                <h4>Avaliação Especializada</h4>
+                                <p>Diagnóstico preciso com instrumentos padronizados</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Imagem 3: Família acompanhando -->
+                        <div class="care-image care-image--3">
+                            <div class="care-image__placeholder">
+                                <div class="photo-placeholder family-photo">
+                                    <div class="photo-overlay">
+                                        <div class="photo-content">
+                                            <i class="fas fa-users photo-icon"></i>
+                                            <h4>Apoio Familiar</h4>
+                                            <p>Orientação especializada para toda a família</p>
+                                        </div>
+                                    </div>
+                                    <div class="photo-bg family-bg">
+                                        <div class="family-elements">
+                                            <div class="family-group"></div>
+                                            <div class="counselor"></div>
+                                            <div class="comfortable-setting"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="care-image__overlay">
+                                <h4>Apoio Familiar</h4>
+                                <p>Orientação especializada para toda a família</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="children-care__info" data-aos="fade-left" data-aos-delay="400">
+                        <h3 class="info__title">Especialista em Desenvolvimento Infantil</h3>
+                        <p class="info__description">
+                            Com 19 anos de experiência, ofereço um atendimento especializado e humanizado 
+                            para crianças de todas as idades, sempre respeitando o tempo e as necessidades 
+                            individuais de cada pequeno paciente.
+                        </p>
+                        
+                        <div class="care__features">
+                            <div class="feature__item">
+                                <div class="feature__icon">
+                                    <i class="fas fa-child"></i>
+                                </div>
+                                <div class="feature__content">
+                                    <h4>0 a 12 anos</h4>
+                                    <p>Atendimento especializado para todas as faixas etárias</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature__item">
+                                <div class="feature__icon">
+                                    <i class="fas fa-puzzle-piece"></i>
+                                </div>
+                                <div class="feature__content">
+                                    <h4>Abordagem Lúdica</h4>
+                                    <p>Terapias através de brincadeiras e atividades divertidas</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature__item">
+                                <div class="feature__icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <div class="feature__content">
+                                    <h4>Cuidado Humanizado</h4>
+                                    <p>Ambiente acolhedor e profissional especializada</p>
+                                </div>
+                            </div>
+                            
+                            <div class="feature__item">
+                                <div class="feature__icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="feature__content">
+                                    <h4>Apoio à Família</h4>
+                                    <p>Orientação e suporte para pais e cuidadores</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="care__stats">
+                            <div class="stat__card">
+                                <span class="stat__number">500+</span>
+                                <span class="stat__label">Crianças Atendidas</span>
+                            </div>
+                            <div class="stat__card">
+                                <span class="stat__number">95%</span>
+                                <span class="stat__label">Taxa de Sucesso</span>
+                            </div>
+                            <div class="stat__card">
+                                <span class="stat__number">19</span>
+                                <span class="stat__label">Anos de Experiência</span>
+                            </div>
+                        </div>
+                        
+                        <a href="#contact" class="btn btn--primary">
+                            <i class="fas fa-calendar-check"></i>
+                            Agendar Consulta Infantil
+                        </a>
                     </div>
                 </div>
             </div>

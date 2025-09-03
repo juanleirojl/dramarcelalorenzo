@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80">
+  <defs>
+    <!-- Gradiente principal -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6EC1E4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A8E063;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradiente para o ícone -->
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6EC1E4;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#A8E063;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFD700;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Sombra -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background circle para o ícone -->
+  <circle cx="40" cy="40" r="32" fill="url(#iconGradient)" opacity="0.1"/>
+  
+  <!-- Ícone principal - Símbolo médico estilizado -->
+  <g transform="translate(40, 40)" filter="url(#shadow)">
+    <!-- Coração estilizado representando cuidado -->
+    <path d="M-12,-8 C-12,-12 -8,-16 -4,-16 C0,-16 0,-12 0,-8 C0,-12 0,-16 4,-16 C8,-16 12,-12 12,-8 C12,-4 0,8 0,8 C0,8 -12,-4 -12,-8 Z" 
+          fill="url(#iconGradient)" opacity="0.8"/>
+    
+    <!-- Cruz médica central -->
+    <rect x="-1.5" y="-10" width="3" height="20" fill="#ffffff" rx="1"/>
+    <rect x="-8" y="-1.5" width="16" height="3" fill="#ffffff" rx="1"/>
+    
+    <!-- Pequenos pontos decorativos -->
+    <circle cx="-18" cy="-4" r="1.5" fill="url(#primaryGradient)" opacity="0.6"/>
+    <circle cx="18" cy="4" r="1.5" fill="url(#primaryGradient)" opacity="0.6"/>
+    <circle cx="0" cy="-20" r="1" fill="#FFD700" opacity="0.7"/>
+  </g>
+  
+  <!-- Texto principal -->
+  <g transform="translate(85, 30)">
+    <!-- Nome principal -->
+    <text x="0" y="0" font-family="'Playfair Display', serif" font-size="22" font-weight="600" fill="url(#primaryGradient)">
+      Dra. Marcela Lorenzo
+    </text>
+    
+    <!-- Linha decorativa -->
+    <line x1="0" y1="8" x2="180" y2="8" stroke="url(#primaryGradient)" stroke-width="2" opacity="0.6"/>
+    
+    <!-- Subtítulo -->
+    <text x="0" y="25" font-family="'Poppins', sans-serif" font-size="11" font-weight="500" fill="#7f8c8d" letter-spacing="1px">
+      FONOAUDIÓLOGA ESPECIALISTA
+    </text>
+    
+    <!-- Especialidade -->
+    <text x="0" y="40" font-family="'Poppins', sans-serif" font-size="9" font-weight="400" fill="#7f8c8d">
+      Motricidade Orofacial • Disfagia • Desenvolvimento Infantil
+    </text>
+  </g>
+  
+  <!-- Elementos decorativos -->
+  <g opacity="0.3">
+    <!-- Pequenas formas orgânicas -->
+    <ellipse cx="280" cy="15" rx="8" ry="4" fill="url(#primaryGradient)" opacity="0.4"/>
+    <ellipse cx="290" cy="35" rx="6" ry="3" fill="#FFD700" opacity="0.5"/>
+    <ellipse cx="270" cy="55" rx="5" ry="2.5" fill="url(#primaryGradient)" opacity="0.3"/>
+  </g>
+  
+  <!-- Animação sutil (opcional) -->
+  <style>
+    @keyframes pulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+    
+    .pulse-element {
+      animation: pulse 3s ease-in-out infinite;
+    }
+  </style>
+  
+  <!-- Aplicar animação aos pontos decorativos -->
+  <circle cx="22" cy="36" r="1.5" fill="url(#primaryGradient)" class="pulse-element"/>
+  <circle cx="58" cy="44" r="1.5" fill="url(#primaryGradient)" class="pulse-element" style="animation-delay: 1s;"/>
+</svg>
