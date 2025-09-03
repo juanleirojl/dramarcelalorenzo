@@ -10,7 +10,26 @@ Uma landing page moderna, responsiva e interativa para **Dra. Marcela Magalhães
 
 ## 👩‍⚕️ Sobre a Profissional
 
-**Dra. Marcela Magalhães Queiroz Lorenzo Leiro** é fonoaudióloga, mestre em Genética e Biodiversidade pela UFBA e especialista em Motricidade Orofacial com ênfase em disfagia. Com 19 anos de experiência, atua em desenvolvimento infantil, síndromes genéticas, malformações congênitas craniofaciais e disfagia neonatal e pediátrica. Tem experiência em coordenação de bacharelado, docência no ensino superior (graduação e pós-graduação) e diversas certificações em terapias e abordagens inovadoras.
+**Dra. Marcela Magalhães Queiroz Lorenzo Leiro** é fonoaudióloga especialista em Motricidade Orofacial com 19 anos de experiência clínica e acadêmica. Possui Mestrado em Genética e Biodiversidade pela UFBA e especialização em Motricidade Orofacial com ênfase em disfagia.
+
+### 🎓 Formação Acadêmica
+- **Mestrado** em Genética e Biodiversidade (UFBA)
+- **Especialização** em Motricidade Orofacial com ênfase em Disfagia
+- **Graduação** em Fonoaudiologia
+
+### 💼 Experiência Profissional
+- **19 anos** de experiência clínica
+- Coordenação de curso de bacharelado
+- Docência no ensino superior (graduação e pós-graduação)
+- Supervisão e orientação de estágios clínicos
+- Consultoria em desenvolvimento infantil
+
+### 🏆 Áreas de Especialização
+- **Motricidade Orofacial**: Avaliação e tratamento de disfunções do sistema estomatognático
+- **Disfagia**: Neonatal, pediátrica e adulto
+- **Desenvolvimento Infantil**: Marcos do desenvolvimento e intervenção precoce
+- **Síndromes Genéticas**: Abordagem multidisciplinar
+- **Malformações Craniofaciais**: Fissuras lábiopalatinas e cirurgias ortognáticas
 
 ## 🎯 Características da Landing Page
 
@@ -22,18 +41,35 @@ Uma landing page moderna, responsiva e interativa para **Dra. Marcela Magalhães
 - Interface acessível (WCAG guidelines)
 
 ### 📱 Seções Implementadas
-- **Header**: Navegação fixa com logo
-- **Hero Section**: Foto profissional e chamada de impacto
-- **Sobre**: Biografia e certificações detalhadas
-- **Serviços**: 5 áreas de especialização
+
+#### 🏠 Página Principal (index.html)
+- **Header**: Navegação fixa com logo profissional
+- **Hero Section**: Apresentação com foto e estatísticas
+- **Sobre**: Biografia detalhada e certificações
+- **Serviços**: 5 áreas principais de atendimento
 - **Experiência**: Timeline profissional interativa
-- **Cursos**: Palestras e depoimentos em carrossel
-- **Contato**: Formulário validado e links diretos
-- **Footer**: Informações completas e redes sociais
+- **Cursos**: Carrossel de palestras e depoimentos
+- **Contato**: Formulário completo e informações
+
+#### 🎯 Página de Mentoria (mentoria.html)
+- **Hero Mentoria**: Apresentação especializada em mentoria profissional
+- **6 Especializações**: 
+  - Motricidade Orofacial
+  - Disfagia Pediátrica
+  - Desenvolvimento Infantil
+  - Síndromes Genéticas
+  - Alimentação Infantil
+  - Reabilitação Pós-Cirúrgica
+- **Metodologia**: 5 etapas estruturadas de aprendizado
+- **Planos de Mentoria**:
+  - **Básica**: R$ 1.200 (3 meses, consultorias individuais)
+  - **Premium**: R$ 2.500 (6 meses, grupo + individual + certificado)
+  - **VIP**: R$ 3.500 (12 meses, acompanhamento completo + networking)
 
 ### ⚡ Funcionalidades
 - Menu mobile responsivo com animações
 - Navegação suave entre seções (smooth scroll)
+- Sistema de páginas múltiplas (index.html + mentoria.html)
 - Carrossel automático de depoimentos
 - Formulário de contato com validação em tempo real
 - Animações on-scroll (AOS library)
@@ -41,16 +77,35 @@ Uma landing page moderna, responsiva e interativa para **Dra. Marcela Magalhães
 - Botão "voltar ao topo" com efeito
 - Loading screen personalizada
 - Otimizações de performance (lazy loading)
+- WhatsApp integration para contato direto
+- Sistema de notificações interativas
+- Design adaptativo para todas as telas
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **HTML5**: Semântico e estruturado
-- **CSS3**: Grid, Flexbox, Custom Properties, Animations
-- **JavaScript ES6+**: Classes, Modules, Async/Await
-- **Libraries**: 
-  - Font Awesome (ícones)
-  - AOS (Animate On Scroll)
-  - Google Fonts (tipografia)
+### Frontend
+- **HTML5**: Semântico e estruturado (2 páginas principais)
+- **CSS3**: Grid, Flexbox, Custom Properties, Animations, Media Queries
+- **JavaScript ES6+**: Classes, Modules, Async/Await, DOM Manipulation
+
+### Libraries & Frameworks
+- **Font Awesome 6.0**: Ícones vetoriais
+- **AOS (Animate On Scroll)**: Animações suaves
+- **Google Fonts**: Poppins + Playfair Display
+
+### Estrutura de Arquivos
+```
+📁 dramarcelalorenzo/
+├── 📄 index.html              # Página principal
+├── 📄 mentoria.html           # Página de mentoria
+├── 📄 styles.css              # Estilos principais
+├── 📄 mentoria-styles.css     # Estilos da mentoria
+├── 📄 script.js               # Scripts principais
+├── 📄 mentoria-script.js      # Scripts da mentoria
+├── 🖼️ logo-marcela-lorenzo.svg # Logo profissional
+├── 🖼️ dr-marcela-consultorio.png # Foto do consultório
+└── 📄 README.md               # Documentação
+```
 
 ## 📋 Como usar
 
@@ -143,10 +198,22 @@ Modifique as variáveis CSS em `styles.css`:
 
 ## 📞 Contato da Profissional
 
-- **WhatsApp**: [Clique aqui](https://wa.me/5571999999999)
-- **Email**: dra.marcela@exemplo.com
+### 🏥 Consultório
+- **Endereço**: Salvador, Bahia
+- **Horário**: Segunda a Sexta, 8h às 18h
+- **Agendamento**: Via WhatsApp ou telefone
+
+### 📱 Canais de Comunicação
+- **WhatsApp**: [+55 (71) 99999-9999](https://wa.me/5571999999999)
+- **Email**: contato@drmarcelalonenzo.com
 - **Instagram**: [@drmarcelalonenzo](https://instagram.com/drmarcelalonenzo)
 - **LinkedIn**: [Marcela Lorenzo](https://linkedin.com/in/marcela-lorenzo)
+
+### 🎯 Como Agendar
+1. **Primeira Consulta**: Através do WhatsApp ou site
+2. **Emergências**: Contato direto via telefone
+3. **Mentoria**: Formulário específico na página de mentoria
+4. **Palestras**: Contato via email ou redes sociais
 
 ## 🤝 Contribuição
 
@@ -162,35 +229,65 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ---
 
-### 🎯 Público-Alvo
+---
 
-- Disfunções Orofaciais
-- Terapia Multissensorial Snoezelen
-- Integração Sensorial
-- Teste Screening Denver II (Desenvolvimento Infantil)
-- Introdução Alimentar (BLW e outras abordagens)
-- Fundamentos da Abordagem Integrativa para dificuldades alimentares infantis
-- Intervenção PROMPT I (The PROMPT Institute)
-- Homologada SENA (Sistema de Estimulação Neuro-Auditivo)
+## 🎯 Serviços Oferecidos
 
-### Áreas de Atuação
+### 👶 Atendimento Clínico
+- **Avaliação Fonoaudiológica Completa**: Diagnóstico detalhado das funções orais
+- **Terapia de Motricidade Orofacial**: Reabilitação de funções de sucção, deglutição, mastigação e fala
+- **Disfagia Pediátrica**: Tratamento de dificuldades alimentares em crianças
+- **Acompanhamento Pós-Cirúrgico**: Reabilitação após cirurgias ortognáticas e fissuras
+- **Estimulação Precoce**: Intervenção em bebês e crianças pequenas
 
-- Identificação, avaliação e intervenção precoce em crianças com risco para distúrbios do Sistema Estomatognático (respiração, sucção, deglutição, mastigação e fala)
-- Transtornos do desenvolvimento da linguagem e do neurodesenvolvimento
-- Avaliação, tratamento e follow-up em cirurgias ortognáticas, fissuras lábiopalatinas e anquiloglossias
+### 🧠 Especialidades Avançadas
+- **Síndromes Genéticas**: Abordagem multidisciplinar especializada
+- **Malformações Craniofaciais**: Tratamento integrado
+- **Transtornos do Neurodesenvolvimento**: Avaliação e intervenção
+- **Integração Sensorial**: Terapia multissensorial
+- **Introdução Alimentar**: BLW e outras abordagens
 
-## Público-Alvo
+### 👩‍🏫 Mentoria Profissional
+Programa exclusivo para fonoaudiólogos que desejam se especializar em:
+- **6 Áreas de Especialização**: Motricidade, Disfagia, Desenvolvimento, Síndromes, Alimentação, Reabilitação
+- **3 Planos Disponíveis**: Básica (R$ 1.200), Premium (R$ 2.500), VIP (R$ 3.500)
+- **Metodologia Estruturada**: 5 etapas de aprendizado progressivo
+- **Certificação**: Incluída nos planos Premium e VIP
 
-- Pais de crianças com dificuldades alimentares, de fala ou desenvolvimento
-- Profissionais de saúde (fonoaudiólogos, pediatras, geneticistas, terapeutas ocupacionais)
-- Clínicas e hospitais especializados em reabilitação infantil
-- Adultos e crianças em pós-operatório de cirurgias ortognáticas ou com malformações craniofaciais
+### 🎤 Palestras e Capacitações
+- **Workshops**: Temas especializados para profissionais
+- **Palestras**: Para pais, escolas e equipes de saúde
+- **Supervisão Clínica**: Para estudantes e profissionais
+- **Consultoria**: Para clínicas e hospitais
 
-### 👥 Persona Principal
+## 🏆 Certificações e Especializações
 
-- **Mães e pais de crianças de 0 a 12 anos** preocupados com o desenvolvimento global dos filhos, especialmente alimentação, fala e linguagem
-- **Profissionais de saúde** buscando referência e parceria em casos complexos de motricidade orofacial e disfagia
-- **Adultos jovens** em reabilitação pós-cirúrgica ou com histórico de alterações orofaciais
+### � Certificações Internacionais
+- **Intervenção PROMPT I** (The PROMPT Institute)
+- **Terapia Multissensorial Snoezelen**
+- **Sistema de Estimulação Neuro-Auditivo (SENA)**
+
+### 🎓 Capacitações Especializadas
+- **Integração Sensorial**: Abordagem terapêutica avançada
+- **Denver II**: Teste de screening para desenvolvimento infantil
+- **Fundamentos da Abordagem Integrativa**: Dificuldades alimentares infantis
+- **BLW (Baby Led Weaning)**: Introdução alimentar
+- **Disfunções Orofaciais**: Avaliação e tratamento
+
+## 📈 Resultados e Impacto
+
+### 📊 Estatísticas Profissionais
+- **19 anos** de experiência clínica
+- **500+** pacientes atendidos anualmente
+- **50+** profissionais mentorados
+- **100+** palestras e workshops ministrados
+- **95%** de satisfação dos pacientes
+
+### 🎯 Público Atendido
+- **Bebês e Crianças**: 0 a 12 anos com dificuldades alimentares e de desenvolvimento
+- **Adolescentes e Adultos**: Reabilitação pós-cirúrgica e disfunções orofaciais
+- **Profissionais de Saúde**: Fonoaudiólogos, pediatras, terapeutas
+- **Equipes Multidisciplinares**: Hospitais, clínicas e centros de reabilitação
 
 ---
 
